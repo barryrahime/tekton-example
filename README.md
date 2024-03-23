@@ -52,6 +52,8 @@ You can check that the image is pushed on you dockerhub repo
     kubectl get tekton-pipelines
     kubectl describe pipelinerun.tekton.dev/simple-webapp-docker-pipeline-run-1
 
+### tekton hub
+pour avoir plus de documentation sur tekton visiter https://hub.tekton.dev/ montre comment sont definis un certains nombre de pipline 
 Verify that the application is deployed based on this [deployment file](https://github.com/eazytrainingfr/simple-webapp-docker/blob/master/kubernetes/deployment.yml) 
 You can list pod : `kubectl get pod`and verify that a pod is newly created
 You can also use `kubectl port-forward $(kubectl get po  -l app=simple-webapp-docker -o=name) 8080:8080 --address 0.0.0.0` to verify that application is well responding
